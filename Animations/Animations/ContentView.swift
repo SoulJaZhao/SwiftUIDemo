@@ -188,6 +188,7 @@ struct ContentView: View {
 
 
     var body: some View {
+        CustomAnimationContentView()
         ExplicitAnimationContentView()
         Button("Tap Me") {
             animationAmount += 1
