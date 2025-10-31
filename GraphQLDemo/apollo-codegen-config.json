@@ -1,0 +1,31 @@
+{
+  "schemaNamespace": "RMAPI",
+  "schemaDownload": {
+    "downloadMethod": {
+      "introspection": {
+        "endpointURL": "https://rickandmortyapi.com/graphql",
+        "httpMethod": { "POST": {} },
+        "includeDeprecatedInputValues": false,
+        "includeDeprecatedEnumCases": true,
+        "outputFormat": "SDL"
+      }
+    },
+    "headers": [],
+    "downloadTimeout": 60,
+    "outputPath": "./GraphQL/schema.graphqls"
+  },
+  "input": {
+    "operationSearchPaths": ["./GraphQL/**/*.graphql"],
+    "schemaSearchPaths": ["./GraphQL/**/*.graphqls"]
+  },
+  "output": {
+    "testMocks": { "none": {} },
+    "schemaTypes": {
+      "path": "./GraphQL/RMAPI",
+      "moduleType": {
+        "embeddedInTarget": { "name": "GraphQLDemo" }
+      }
+    },
+    "operations": { "inSchemaModule": true }
+  }
+}
