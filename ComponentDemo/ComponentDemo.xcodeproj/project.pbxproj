@@ -6,14 +6,26 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		21DB06902EBB0EC3006EC25E /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 21DB068F2EBB0EC3006EC25E /* Apollo */; };
+		21DB06922EBB0EC3006EC25E /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 21DB06912EBB0EC3006EC25E /* ApolloWebSocket */; };
+		21DB06952EBB26E3006EC25E /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 21DB06942EBB26D6006EC25E /* ReadMe.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		21DB06752EBAF783006EC25E /* ComponentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComponentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DB06942EBB26D6006EC25E /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		21DB06772EBAF783006EC25E /* ComponentDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ComponentDemo;
+			sourceTree = "<group>";
+		};
+		21DB06932EBB0EFD006EC25E /* GraphQL */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GraphQL;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21DB06902EBB0EC3006EC25E /* Apollo in Frameworks */,
+				21DB06922EBB0EC3006EC25E /* ApolloWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +46,8 @@
 		21DB066C2EBAF783006EC25E = {
 			isa = PBXGroup;
 			children = (
+				21DB06942EBB26D6006EC25E /* ReadMe.md */,
+				21DB06932EBB0EFD006EC25E /* GraphQL */,
 				21DB06772EBAF783006EC25E /* ComponentDemo */,
 				21DB06762EBAF783006EC25E /* Products */,
 			);
@@ -62,9 +78,12 @@
 			);
 			fileSystemSynchronizedGroups = (
 				21DB06772EBAF783006EC25E /* ComponentDemo */,
+				21DB06932EBB0EFD006EC25E /* GraphQL */,
 			);
 			name = ComponentDemo;
 			packageProductDependencies = (
+				21DB068F2EBB0EC3006EC25E /* Apollo */,
+				21DB06912EBB0EC3006EC25E /* ApolloWebSocket */,
 			);
 			productName = ComponentDemo;
 			productReference = 21DB06752EBAF783006EC25E /* ComponentDemo.app */;
@@ -94,6 +113,9 @@
 			);
 			mainGroup = 21DB066C2EBAF783006EC25E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				21DB068E2EBB0EC3006EC25E /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 21DB06762EBAF783006EC25E /* Products */;
 			projectDirPath = "";
@@ -109,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21DB06952EBB26E3006EC25E /* ReadMe.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +281,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -285,6 +309,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,6 +345,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21DB068E2EBB0EC3006EC25E /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21DB068F2EBB0EC3006EC25E /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21DB068E2EBB0EC3006EC25E /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		21DB06912EBB0EC3006EC25E /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21DB068E2EBB0EC3006EC25E /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21DB066D2EBAF783006EC25E /* Project object */;
 }
