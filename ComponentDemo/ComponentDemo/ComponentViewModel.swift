@@ -20,13 +20,12 @@ class ComponentViewModel: ObservableObject {
     }
     
     private func bind() {
-        self.isLoading = true
         $query
             .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
             .removeDuplicates()
             .receive(on: RunLoop.main)
-            .sink { [weak self] result in
-                self?.isLoading = false
+            .sink { [weak self] _ in
+                
             }
             .store(in: &cancellables)
     }
@@ -34,6 +33,13 @@ class ComponentViewModel: ObservableObject {
     func cancelSearch() {
         query = ""
         // isLoading will be updated by pipeline; also ensure immediate state
-        isLoading = true
+        self.isLoading = true
+        
+        Task {
+            try? await Task.sleep(nanoseconds: 500_000_000) // Simulate delay
+            await MainActor.run {
+                self.isLoading = false
+            }
+        }
     }
 }
