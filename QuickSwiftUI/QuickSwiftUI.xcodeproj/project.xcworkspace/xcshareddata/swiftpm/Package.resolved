@@ -1,0 +1,15 @@
+{
+  "originHash" : "f40d22b6c7d7d037ba2ea58c1dbc40f450b6ca620683c67e824b5d5188a18ade",
+  "pins" : [
+    {
+      "identity" : "apollo-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitee.com/mirrors_apollographql/apollo-ios",
+      "state" : {
+        "revision" : "1abd62f6cbc8c1f4405919d7eb6cd8e96967b07c",
+        "version" : "1.25.3"
+      }
+    }
+  ],
+  "version" : 3
+}

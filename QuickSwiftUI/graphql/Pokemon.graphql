@@ -1,0 +1,23 @@
+query Pokemon($name: String!, $limit: Int, $offset: Int) {
+  pokemon(where: { name: { _eq: $name } }, limit: $limit, offset: $offset) {
+    id
+    name
+    height
+    weight
+    pokemon_species_id
+    pokemonabilities {
+      ability_id
+      ability {
+        name
+      }
+    }
+  }
+  pokemonspecies(where: { name: { _eq: $name } }) {
+    id
+    name
+    pokemoncolor {
+      id
+      name
+    }
+  }
+}
