@@ -44,7 +44,26 @@ struct ProspectsView: View {
                         }
                     }
                 }
+            List(prospects) { prospect in
+                VStack(alignment: .leading) {
+                    Text(prospect.name)
+                        .font(.headline)
+                    Text(prospect.emailAddress)
+                        .foregroundStyle(.secondary)
+                }
+            }
+        }
+    }
+    
+    init(filter: FilterType) {
+        self.filter = filter
 
+        if filter != .none {
+            let showContactedOnly = filter == .contacted
+
+            _prospects = Query(filter: #Predicate {
+                $0.isContacted == showContactedOnly
+            }, sort: [SortDescriptor(\Prospect.name)])
         }
     }
 }
